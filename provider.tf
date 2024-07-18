@@ -7,9 +7,11 @@ terraform {
  }
 
  backend "s3" {
-   bucket = "tf-tuts-state"
+   bucket = "pm123bucket"
    key    = "state"
-   region = "eu-central-1"
+   region = "eu-north-1"
  }
 }
-
+provider "aws" {
+	region = "eu-north-1"
+}
